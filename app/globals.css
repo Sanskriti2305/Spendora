@@ -1,0 +1,290 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated to sleek dark theme with vibrant accents */
+  --background: oklch(0.08 0.01 240);
+  --foreground: oklch(34.865% 0.08573 317.437);
+  --card: oklch(0.12 0.02 240);
+  --card-foreground: oklch(0.98 0.01 0);
+  --popover: oklch(0.12 0.02 240);
+  --popover-foreground: oklch(0.98 0.01 0);
+  --primary: oklch(0.65 0.2 150);
+  --primary-foreground: oklch(0.08 0.01 240);
+  --secondary: oklch(0.85 0.15 150);
+  --secondary-foreground: oklch(0.08 0.01 240);
+  --muted: oklch(0.18 0.02 240);
+  --muted-foreground: oklch(0.65 0.02 240);
+  --accent: oklch(0.68 0.22 280);
+  --accent-foreground: oklch(0.08 0.01 240);
+  --destructive: oklch(0.65 0.2 25);
+  --destructive-foreground: oklch(0.08 0.01 240);
+  --border: oklch(0.18 0.02 240);
+  --input: oklch(0.12 0.02 240);
+  --ring: oklch(0.65 0.2 150);
+
+  /* Vibrant category colors for dark theme */
+  --category-food: oklch(0.75 0.18 100);
+  --category-shopping: oklch(0.7 0.2 280);
+  --category-transport: oklch(0.72 0.18 30);
+  --category-utilities: oklch(0.7 0.15 210);
+  --category-entertainment: oklch(0.68 0.2 350);
+  --category-health: oklch(0.65 0.18 20);
+  --category-subscription: oklch(0.7 0.18 260);
+
+  --chart-1: oklch(0.65 0.2 150);
+  --chart-2: oklch(0.75 0.18 100);
+  --chart-3: oklch(0.72 0.18 30);
+  --chart-4: oklch(0.68 0.2 350);
+  --chart-5: oklch(0.7 0.15 210);
+  --chart-6: oklch(0.7 0.2 280);
+  --radius: 1rem;
+  --sidebar: oklch(0.12 0.02 240);
+  --sidebar-foreground: oklch(55.485% 0.18 13.066);
+  --sidebar-primary: oklch(0.65 0.2 150);
+  --sidebar-primary-foreground: oklch(0.08 0.01 240);
+  --sidebar-accent: oklch(0.85 0.15 150);
+  --sidebar-accent-foreground: oklch(0.08 0.01 240);
+  --sidebar-border: oklch(0.18 0.02 240);
+  --sidebar-ring: oklch(0.65 0.2 150);
+}
+
+.dark {
+  --background: oklch(0.12 0.02 240);
+  --foreground: oklch(95.189% 0.01472 322.013);
+  --card: oklch(0.18 0.03 240);
+  --card-foreground: oklch(20.222% 0.07298 331.615);
+  --popover: oklch(0.18 0.03 240);
+  --popover-foreground: oklch(16.847% 0.0616 323.18);
+  --primary: oklch(0.62 0.18 150);
+  --primary-foreground: oklch(0.12 0.02 240);
+  --secondary: oklch(0.85 0.15 150);
+  --secondary-foreground: oklch(0.12 0.02 240);
+  --muted: oklch(0.25 0.02 240);
+  --muted-foreground: oklch(0.7 0.02 240);
+  --accent: oklch(0.65 0.2 280);
+  --accent-foreground: oklch(0.12 0.02 240);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.25 0.02 240);
+  --input: oklch(0.18 0.02 240);
+  --ring: oklch(0.62 0.18 150);
+  --category-food: oklch(0.75 0.18 100);
+  --category-shopping: oklch(0.7 0.2 280);
+  --category-transport: oklch(0.72 0.18 30);
+  --category-utilities: oklch(0.7 0.15 210);
+  --category-entertainment: oklch(0.65 0.2 350);
+  --category-health: oklch(0.62 0.18 20);
+  --category-subscription: oklch(0.68 0.18 260);
+  --chart-1: oklch(0.62 0.18 150);
+  --chart-2: oklch(0.75 0.18 100);
+  --chart-3: oklch(0.72 0.18 30);
+  --chart-4: oklch(0.65 0.2 350);
+  --chart-5: oklch(0.7 0.15 210);
+  --chart-6: oklch(0.7 0.2 280);
+  --sidebar: oklch(0.18 0.03 240);
+  --sidebar-foreground: oklch(95.111% 0.01413 318.374);
+  --sidebar-primary: oklch(0.62 0.18 150);
+  --sidebar-primary-foreground: oklch(0.12 0.02 240);
+  --sidebar-accent: oklch(0.85 0.15 150);
+  --sidebar-accent-foreground: oklch(0.12 0.02 240);
+  --sidebar-border: oklch(0.25 0.02 240);
+  --sidebar-ring: oklch(0.62 0.18 150);
+}
+
+@theme inline {
+  --font-sans: "Geist", "Geist Fallback";
+  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-chart-6: var(--chart-6);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* Updated background to dark gradient with subtle transitions */
+    background: linear-gradient(135deg, #0a0e27 0%, #0f1738 50%, #1a0f2e 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+  }
+}
+
+/* Added animated money falling background */
+@keyframes moneyFall {
+  0% {
+    transform: translateY(-100%) rotateZ(0deg);
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(100vh) rotateZ(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes moneyFloat {
+  0% {
+    transform: translateX(0px) translateY(0px) rotateZ(0deg);
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(50px) translateY(100vh) rotateZ(360deg);
+    opacity: 0;
+  }
+}
+
+.money-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.money-item {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.5;
+  filter: drop-shadow(0 0 10px rgba(16, 185, 129, 0.3));
+}
+
+.money-item:nth-child(1) {
+  animation: moneyFall 8s linear infinite;
+  left: 10%;
+  animation-delay: 0s;
+}
+.money-item:nth-child(2) {
+  animation: moneyFall 10s linear infinite;
+  left: 20%;
+  animation-delay: 1s;
+}
+.money-item:nth-child(3) {
+  animation: moneyFall 9s linear infinite;
+  left: 30%;
+  animation-delay: 2s;
+}
+.money-item:nth-child(4) {
+  animation: moneyFall 11s linear infinite;
+  left: 40%;
+  animation-delay: 0.5s;
+}
+.money-item:nth-child(5) {
+  animation: moneyFall 8s linear infinite;
+  left: 50%;
+  animation-delay: 1.5s;
+}
+.money-item:nth-child(6) {
+  animation: moneyFall 10s linear infinite;
+  left: 60%;
+  animation-delay: 2.5s;
+}
+.money-item:nth-child(7) {
+  animation: moneyFall 9s linear infinite;
+  left: 70%;
+  animation-delay: 1s;
+}
+.money-item:nth-child(8) {
+  animation: moneyFall 11s linear infinite;
+  left: 80%;
+  animation-delay: 0.5s;
+}
+.money-item:nth-child(9) {
+  animation: moneyFall 8s linear infinite;
+  left: 90%;
+  animation-delay: 2s;
+}
+.money-item:nth-child(10) {
+  animation: moneyFall 10s linear infinite;
+  left: 5%;
+  animation-delay: 1.5s;
+}
+.money-item:nth-child(11) {
+  animation: moneyFall 9s linear infinite;
+  left: 25%;
+  animation-delay: 0s;
+}
+.money-item:nth-child(12) {
+  animation: moneyFall 11s linear infinite;
+  left: 75%;
+  animation-delay: 2s;
+}
+.money-item:nth-child(13) {
+  animation: moneyFall 10s linear infinite;
+  left: 15%;
+  animation-delay: 1s;
+}
+.money-item:nth-child(14) {
+  animation: moneyFall 8s linear infinite;
+  left: 55%;
+  animation-delay: 0.5s;
+}
+.money-item:nth-child(15) {
+  animation: moneyFall 11s linear infinite;
+  left: 85%;
+  animation-delay: 1.5s;
+}
+
+/* Removed custom transition-smooth class and kept only other utilities */
+@layer utilities {
+  .shadow-fintech {
+    @apply shadow-lg;
+  }
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent;
+  }
+  .card-hover {
+    @apply hover:shadow-xl hover:scale-105 hover:border-primary/50 transition-all duration-300;
+  }
+  .badge-glow {
+    @apply shadow-lg shadow-primary/30;
+  }
+}
