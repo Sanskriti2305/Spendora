@@ -38,7 +38,7 @@ https://drive.google.com/file/d/1baXD2VtHY3SM5Vxl-31FXraTSPoWYXr9/view?usp=drive
 - YAML taxonomy  
 
 ---
-# ** Run Locally **
+# Run Locally 
 
 ````markdown
 ## 🧪 How to Run Spendora Locally
