@@ -38,13 +38,7 @@ https://drive.google.com/file/d/1baXD2VtHY3SM5Vxl-31FXraTSPoWYXr9/view?usp=drive
 - YAML taxonomy  
 
 ---
-Got it — your project uses a **Node.js frontend** + **Python backend**, not Streamlit.
-
-Here is the **correct, clean, copy-paste-ready Markdown “Run Locally” section** based EXACTLY on your steps:
-
----
-
-# ⬇️ **COPY FROM HERE — Correct Run Locally (Markdown)**
+# ** Run Locally **
 
 ````markdown
 ## 🧪 How to Run Spendora Locally
